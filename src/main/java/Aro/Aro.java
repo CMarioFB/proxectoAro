@@ -5,7 +5,9 @@ package Aro;
  * @author A21CarlosFB
  */
 public class Aro {
-    public static final double LIMITERADIO = 0.0;
+
+    private static final double LIMITERADIO = 0.0;
+    public static final double MINIMO = LIMITERADIO;
 
     private int coordenadaX;
     private int coordenadaY;
@@ -38,7 +40,7 @@ public class Aro {
 
     public void establecerRadio(double valorRadio) {
 
-        radio=(valorRadio < LIMITERADIO ? LIMITERADIO : valorRadio);
+        radio=(valorRadio < MINIMO ? MINIMO : valorRadio);
     }
 
     public double obterRadio() {
