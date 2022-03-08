@@ -27,10 +27,10 @@ public class AroTest {
      */
     @Test
     public void testEstablecerX() {
-        System.out.println("establecerX");
+        System.out.println("establecerCoordenadaX");
         int valorX = 0;
         Aro instance = new Aro();
-        instance.establecerX(valorX);
+        instance.setCoordenadaX(valorX);
     }
 
     /**
@@ -38,10 +38,10 @@ public class AroTest {
      */
     @Test
     public void testObterX() {
-        System.out.println("obterX");
+        System.out.println("obterCoordenadaX");
         Aro instance = new Aro(0,0,0.1);
         int expResult = 0;
-        int result = instance.obterX();
+        int result = instance.getCoordenadaX();
         assertEquals(expResult, result);
     }
 
@@ -50,10 +50,10 @@ public class AroTest {
      */
     @Test
     public void testEstablecerY() {
-        System.out.println("establecerY");
+        System.out.println("establecerCoordenadaY");
         int valorY = 0;
         Aro instance = new Aro();
-        instance.establecerY(valorY);
+        instance.setCoordenadaY(valorY);
     }
 
     /**
@@ -61,10 +61,10 @@ public class AroTest {
      */
     @Test
     public void testObterY() {
-        System.out.println("obterY");
+        System.out.println("obterCoordenadaY");
         Aro instance = new Aro(0,0,0.1);
         int expResult = 0;
-        int result = instance.obterY();
+        int result = instance.getCoordenadaY();
         assertEquals(expResult, result);
     }
 
@@ -75,9 +75,9 @@ public class AroTest {
     public void testEstablecerRadio() {
         System.out.println("establecerRadio");
         Aro instance = new Aro();
-        instance.establecerRadio(0.0);
-        instance.establecerRadio(0.1);
-        instance.establecerRadio(-0.1);
+        instance.setRadio(0.0);
+        instance.setRadio(0.1);
+        instance.setRadio(-0.1);
     }
 
     /**
@@ -87,17 +87,17 @@ public class AroTest {
     public void testObterRadio() {
         System.out.println("obterRadio");
         Aro instance = new Aro(0,0,0.1);
-        double result = instance.obterRadio();
+        double result = instance.getRadio();
         assertEquals(0.1, result,0);
 
-        instance.establecerRadio(0.1);
-        result= instance.obterRadio();
+        instance.setRadio(0.1);
+        result= instance.getRadio();
         assertEquals(0.1, result,0);
 
-        instance.establecerRadio(-0.1);
-        result= instance.obterRadio();
+        instance.setRadio(-0.1);
+        result= instance.getRadio();
         assertEquals(0.0, result,0);
-    }
+    }  //
 
     /**
      * Test of obterDiametro method, of class Aro.
@@ -141,11 +141,11 @@ public class AroTest {
     public void testTrasladarCentro() {
         System.out.println("trasladarCentro");
         Aro instance = new Aro();
-        int resultx=instance.obterX();
-        int resulty=instance.obterY();
+        int resultx=instance.getCoordenadaX();
+        int resulty=instance.getCoordenadaY();
         instance.trasladarCentro(5, 6);
-        int resultnx = instance.obterX();
-        int resultny = instance.obterY();
+        int resultnx = instance.getCoordenadaX();
+        int resultny = instance.getCoordenadaY();
         assertEquals(resultx+5, resultnx);
         assertEquals(resulty+6, resultny);
     }

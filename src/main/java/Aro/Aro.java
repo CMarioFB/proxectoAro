@@ -45,11 +45,12 @@ public class Aro {
      * @param radio the radio to set
      */
     public void setRadio(double radio) {
-        this.radio = radio;
+        this.radio=(radio < MINIMO ? MINIMO : radio);
+        
     }
 
-    private static final double LIMITERADIO = 0.0;
-    public static final double MINIMO = LIMITERADIO;
+    private static double LIMITERADIO = 0.0;
+    public static final double MINIMO = getLIMITERADIO();
 
     private int coordenadaX;
     private int coordenadaY;
@@ -61,33 +62,9 @@ public class Aro {
     public Aro(int valorX, int valorY, double valorRadio) {
         coordenadaX = valorX;
         coordenadaY = valorY;
-        establecerRadio(valorRadio);
+        setRadio(valorRadio);
     }
 
-    public void establecerX(int valorX) {
-        setCoordenadaX(valorX);
-    }
-
-    public int obterX() {
-        return getCoordenadaX();
-    }
-
-    public void establecerY(int valorY) {
-        setCoordenadaY(valorY);
-    }
-
-    public int obterY() {
-        return getCoordenadaY();
-    }
-
-    public void establecerRadio(double valorRadio) {
-
-        setRadio(valorRadio < MINIMO ? MINIMO : valorRadio);
-    }
-
-    public double obterRadio() {
-        return getRadio();
-    }
 
     public double obterDiametro() {
         return getRadio() * 2;
@@ -109,5 +86,19 @@ public class Aro {
     public void trasladarCentro(int trasladarX, int trasladarY){
         setCoordenadaX(getCoordenadaX() + trasladarX);
         setCoordenadaY(getCoordenadaY() + trasladarY);
+    }
+
+    /**
+     * @return the LIMITERADIO
+     */
+    public static double getLIMITERADIO() {
+        return LIMITERADIO;
+    }
+
+    /**
+     * @param aLIMITERADIO the LIMITERADIO to set
+     */
+    public static void setLIMITERADIO(double aLIMITERADIO) {
+        LIMITERADIO = aLIMITERADIO;
     }
 }
