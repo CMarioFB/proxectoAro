@@ -1,5 +1,5 @@
 /**
- * Probas para a clase Circulo
+ * Probas para a clase Circulo e comprobar que funcionan
  * @author A21CarlosFB
  * 
  */
@@ -14,11 +14,11 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- *
+ *  Test de pruebas de las clases del Proxecto
  * @author A21CarlosFB
  */
 public class AroTest {
-    
+    /** constructor vacio **/
     public AroTest() {
     }
     
