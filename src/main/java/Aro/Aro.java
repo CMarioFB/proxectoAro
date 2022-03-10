@@ -118,7 +118,6 @@ public class Aro {
         setCoordenadaX(getCoordenadaX() + trasladarX);
         setCoordenadaY(getCoordenadaY() + trasladarY);
     }
-
     /**
      * @return the LIMITERADIO
      */
